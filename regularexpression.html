@@ -1,0 +1,34 @@
+// concept of regular expression
+// regular expression is a sequence of characters that defines a search pattern
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let regex = /hello/ // regular expression literal
+        let regex2 = new RegExp("hello") // regular expression constructor
+
+        console.log(regex.test("hello world")) // true
+        console.log(regex.test("hi world")) // false
+
+        console.log(regex2.test("hello world")) // true
+        console.log(regex2.test("hi world")) // false
+
+        // regular expression methods
+        let str = "hello world"
+        console.log(str.match(regex)) // ["hello"]
+        console.log(str.match(regex2)) // ["hello"]
+
+        console.log(str.replace(regex, "hi")) // hi world
+        console.log(str.replace(regex2, "hi")) // hi world
+
+
+    </script>
+
+</body>
+</html>

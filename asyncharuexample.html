@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let cars = ["HONDA","BMW","TOYOTA"]
+
+        const addCar = newCar => {
+            cars.push(newCar)
+        }
+
+        const displayCars = () => {
+            document.write("<br>Cars: ", cars)
+        }
+
+        // displayCars()
+        // addCar("MERCEDES")
+        // displayCars()
+        // addCar("FORD")
+        // displayCars()
+
+        const addCarAsync = (newCar) => {
+            setTimeout(() => {
+                cars.push(newCar)
+            }, 2000)
+        }
+
+        const displayCarsAsync = () => {
+            setTimeout(() => {
+                document.write("<br>Cars: ", cars)
+            }, 3000)
+        }
+
+        displayCarsAsync()
+        addCarAsync("MERCEDES")
+        addCarAsync("FORD")
+
+
+        // Callback and promises
+        // callback - pass the second function to the first function as an argument and call the second function inside the first function
+        // 
+
+         const addCar_cb = (newCar, callback) => {
+            setTimeout(() => {
+                cars.push(newCar)
+                callback()    
+            }, 2000)
+        }
+
+        display_async()
+        addCar_cb("MERCEDES", display_async)
+        addCar_cb("FORD", display_async)
+
+        // promises - an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value
+
+        const addCar_promise = (newCar) => {
+            return new Promise((resolve, reject) => {
+                let error = false
+                if (error) {
+                    reject()
+                } else {
+                    setTimeout(() => {
+                        cars.push(newCar)
+                        resolve()
+                    }, 2000)
+                }
+            })
+        }
+
+        addCar_promise("MERCEDES")
+        .then(() => {
+            display_async()
+        })
+        
+        .catch(() => {
+            document.write("<br>Something went wrong")
+        })
+
+
+        addCar_promise("FORD")
+        .then(() => {
+            display_async()
+        })
+
+        .catch(() => {
+            document.write("<br>Something went wrong")
+        })
+
+    </script>
+    
+</body>
+</html>
