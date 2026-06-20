@@ -1,4 +1,3 @@
-import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Layout from './components/layouts/Layout.jsx'
 import First from './First.jsx'
@@ -7,6 +6,7 @@ import Homepage from './pages/Homepage.jsx'
 import AboutPage from './pages/AboutPage.jsx'
 import ServicePage from './pages/ServicePage.jsx'
 import ContactPage from './pages/ContactPage.jsx'
+import BlogsPage from './pages/BlogsPage.jsx'
 import LetConstVar from './pages/LetConstVar.jsx'
 import RevisionLayout from './components/layouts/RevisionLayout.jsx'
 import PageNotFound from './pages/PageNotFound.jsx'
@@ -23,6 +23,7 @@ const MyRoutes = () => {
              <Route path="/about" element={<AboutPage />} />
              <Route path="/services" element={<ServicePage />} />
              <Route path="/contact" element={<ContactPage />} />
+                  <Route path="/blogs" element={<BlogsPage />} />
 
              <Route path="/revision" element={<RevisionLayout />} >
                     <Route path="topic1" element={<LetConstVar />} />
@@ -32,7 +33,7 @@ const MyRoutes = () => {
              <Route path = "/home" element={<Homepage />} />
 
 
-
+            
              <Route path="*" element={<PageNotFound />} />
           </Route>
         </Routes>
