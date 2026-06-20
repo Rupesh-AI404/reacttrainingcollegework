@@ -9,7 +9,7 @@ export default function ServicePage() {
           Our Services
         </p>
         <h1 className="text-4xl font-bold text-gray-900 md:text-5xl">
-            Practical Solutions for Your Ideas
+            Practical Solutions for Your Brilliant Ideas
         </h1>
         <p className="mt-4 text-base leading-8 text-gray-700 md:text-lg">
           We build clean, modern, and practical solutions that help your ideas stand out and work smoothly across devices.
