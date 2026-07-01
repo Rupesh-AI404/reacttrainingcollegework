@@ -5,7 +5,10 @@ const App = () => {
   return (
     
     <div> 
+        <Provider store={myStore}>
+          
         <MyRoutes />
+        </Provider>
     </div>
   )
 }
