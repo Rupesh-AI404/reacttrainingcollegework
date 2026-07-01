@@ -11,6 +11,7 @@ import LetConstVar from './pages/LetConstVar.jsx'
 import RevisionLayout from './components/layouts/RevisionLayout.jsx'
 import PageNotFound from './pages/PageNotFound.jsx'
 import DataFetch from '../hooks/DataFetch.jsx'
+import StorePage from './pages/StorePage.jsx'
 
 const MyRoutes = () => {
   return (
@@ -32,8 +33,10 @@ const MyRoutes = () => {
              </Route>
 
              <Route path = "/home" element={<Homepage />} />
+             <Route path="/store" element={<StorePage />} />
 
             <Route path= "/post" element={<DataFetch />} />
+
              <Route path="*" element={<PageNotFound />} />
           </Route>
         </Routes>
