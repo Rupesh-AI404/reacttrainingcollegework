@@ -12,6 +12,7 @@ import RevisionLayout from './components/layouts/RevisionLayout.jsx'
 import PageNotFound from './pages/PageNotFound.jsx'
 import DataFetch from '../hooks/DataFetch.jsx'
 import StorePage from './pages/StorePage.jsx'
+import ReduxCounter from './pages/ReduxCounter.jsx'
 
 const MyRoutes = () => {
   return (
@@ -38,6 +39,8 @@ const MyRoutes = () => {
             <Route path= "/post" element={<DataFetch />} />
 
              <Route path="*" element={<PageNotFound />} />
+             <Route path="/reduxcounter" element={<ReduxCounter />} />
+
           </Route>
         </Routes>
     </BrowserRouter>
